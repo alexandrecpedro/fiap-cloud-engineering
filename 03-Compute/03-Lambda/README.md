@@ -414,6 +414,8 @@ python3 dados/publicar_500.py "$API"
 
 Uma barra de progresso mostra o avanço em tempo real (`[####....] 40% 200/500 pedidos`). Saída final: `Concluido: 500/500 pedidos publicados em Ns`. Cada chamada respondeu `202 Accepted` (**`enfileirado`**, não `gravado`) — o produtor responde antes de o S3 ser tocado. É o desacoplamento absorvendo o pico: 500 requisições quase simultâneas entram na fila sem travar o app.
 
+![](img/f2-script-500.png)
+
 <a id="passo-12"></a>
 **12.** Aguarde a consumidora drenar a fila e confirme que os 500 chegaram ao S3 (**go/no-go**). Usa a variável `$BUCKET` do passo 10.2:
 
