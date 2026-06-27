@@ -269,10 +269,10 @@ resource "aws_cloudwatch_dashboard" "negocio" {
           view   = "singleValue",
           stat   = "Sum",
           metrics = [
-            ["PedeJa", "faturamento_tempo_real", "service", "pedeja-faturamento", "cidade", "Sao Paulo", { visible = false }],
-            ["...", "cidade", "Rio de Janeiro", { visible = false }],
-            ["...", "cidade", "Curitiba", { visible = false }],
-            ["...", "cidade", "Belo Horizonte", { visible = false }],
+            ["PedeJa", "faturamento_tempo_real", "service", "pedeja-faturamento", "cidade", "Sao Paulo", { id = "m1", visible = false }],
+            ["...", "cidade", "Rio de Janeiro", { id = "m2", visible = false }],
+            ["...", "cidade", "Curitiba", { id = "m3", visible = false }],
+            ["...", "cidade", "Belo Horizonte", { id = "m4", visible = false }],
             [{ expression = "m1+m2+m3+m4", label = "Faturamento total (R$)", id = "e1" }]
           ]
         }
