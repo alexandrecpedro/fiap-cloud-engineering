@@ -260,15 +260,15 @@ Saída esperada da invocação: `{"status": "ok", "cidades": 4, "s3_key": "resum
 > terraform -chdir=terraform/02-processa apply -auto-approve
 > ```
 
-O `resumo/faturamento.json` deve conter (o faturamento é determinístico — **tem que bater**):
+O `resumo/faturamento.json` deve conter (o faturamento é determinístico — **tem que bater**). As cidades aparecem **sem acento**, exatamente como vêm no dataset (`Sao Paulo`) — sua saída deve ser idêntica a esta:
 
 | Cidade | Pedidos | Faturamento |
 |--------|---------|-------------|
-| São Paulo | 4 | 235.3 |
+| Sao Paulo | 4 | 235.3 |
 | Rio de Janeiro | 2 | 198.4 |
 | Curitiba | 2 | 90.0 |
 | Belo Horizonte | 2 | 73.0 |
-| **Total** | **10** | **596.70** |
+| **Total** | **10** | **596.7** |
 
 <!-- PRINT SUGERIDO: img/processa.png
      Terminal mostrando o resultado da invocação e o conteúdo do faturamento.json com os 4 valores. -->
